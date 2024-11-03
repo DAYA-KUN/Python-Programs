@@ -17,3 +17,5 @@ duck=Duck()
 owl=Owl()
 make_sound(duck)
 make_sound(owl)
+
+# Objects of different classes, objects of same superclass

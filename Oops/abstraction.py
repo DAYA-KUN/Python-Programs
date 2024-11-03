@@ -1,7 +1,7 @@
-from abc import ABC,abstractmethod
+from abc import ABC,abstractmethod # Abstract Base Classes
 
 class Shape(ABC):
-    @abstractmethod
+    @abstractmethod #Python Decorator - Function
     def area(self):
         pass
 
@@ -14,4 +14,6 @@ class Rectangle(Shape):
         return f"The Area of Rectangle is {self.width*self.height}"
     
 rect=Rectangle(20,30)
-print(rect.area)
+print(rect.area())
+
+#Hide uncessary details.
