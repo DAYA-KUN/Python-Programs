@@ -28,6 +28,27 @@ class DoublyLinkedList:
         last.next=new_node
         new_node.prev=last
 
+# 1 <-> 2 <-> 3 <-> 4 [prev,data,next] head->1
+# 5
+
+# new_node=5 prev=None,data=5,next=1
+
+# 5<->1 <-> 2 <-> 3 <-> 4  <-> 6         head->5
+# new_node=6
+#last=5 head=5
+#last=4 head=5
+
+# prev=3
+# data=7=newnode
+
+# 7->4
+# 3<->7<->4
+
+
+
+#Real life applications - Spotify playlists, Gmaps Timeline etc.
+
+
     def insert_after_node(self,prev_node,data):
         if not prev_node:
             print("Previous Node cannot be Null!")
@@ -54,7 +75,7 @@ class DoublyLinkedList:
             print(f"The Node {value} is not found in the linked list")
             return
 
-        current=self.head
+        current=self.head                            
         while current and current.data!=value:
             current=current.next
 
@@ -62,7 +83,10 @@ class DoublyLinkedList:
             print(f"The Node {value} is not found in the linked list")
             return
 
-        
+        # 5<->1 <-> 2 <-> 3 <-> 4  <-> 6   value=4
+        # current=4 head->5
+
+
 
         if current == self.head:
             self.head = current.next
@@ -87,17 +111,22 @@ class DoublyLinkedList:
             current=current.next
         return
     
-dl=DoublyLinkedList()
+    # 5<->1 <-> 2 <-> 3 <-> 4  <->
+    # current=None
+    # 5 1 2 3 4
+
+dl=DoublyLinkedList() #self.head=None
 dl.insert_at_beginning(1)
 dl.insert_at_end(2)
 dl.insert_at_end(3)
 dl.insert_at_end(4)
 dl.insert_at_end(5)
-dl.delete_node(dl.head.next.next.next)
-dl.delete_node_by_value(3)
+dl.display()
+dl.delete_node(dl.head.next.next.next)#4
+dl.delete_node_by_value(3)#3
 dl.delete_node_by_value(7)
 dl.display()
 
 
-# 1 <->end
-# 4 <-> 1
+
+
