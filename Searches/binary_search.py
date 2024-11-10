@@ -9,7 +9,7 @@ def binary_search(arr,target):
             low=mid+1
         else:
             high=mid-1
-    return-1
+    return -1
 
 arr=[10,5,6,7,4,2,8]
 arr.sort()

@@ -25,3 +25,8 @@ print(c)
 #matrix transpose
 c=matrix1.T
 print(c)
+
+#determinant
+d=np.linalg.det(matrix1)
+d=round(d,2) #-2.0000004
+print(d)
